@@ -1,38 +1,172 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+#formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+}
+
+.title{
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.form-control, .btn{
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  outline: none;
+  border: 2px solid #c4c4c4;
+  padding: 0 30px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.form-control div {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.form-control:focus {
+  border: 2px solid #058762;
+}
+.btn {
+  margin-top: 15px;
+  width: 100%;
+  height: 45px;
+  background-color: #058762;
+  border: 2px solid #058762;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+#formulario  i {
+  margin: 3px;
+}
+.btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
+}
+.btn-1,
+.btn-2 {
+  padding: 10px 5px;
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #c4c4c4;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.btn-2 {
+  background-color: #4f70b5;
+  color: white;
+}
+.or {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pregunta {
+  font-size: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+span {
+  color: #058762;
+  cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.contenido {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  background-color: #058762;
+  width: 55%;
+  min-height: 100vh;
+  padding: 10px 20px;
+}
+
+#formulario {
+   width: 45%;
+   max-width: none;
+}
+.imagen {
+  background-image: url("https://svgshare.com/i/_gZ.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 65%;
+}
+.texto {
+  text-align: center;
   color: white;
+  font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+#formulario {
+   width: 45%;
+   max-width: none;
 }
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  #formulario,
+  .contenido {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .btn {
+    flex-direction: column;
   }
+  .imagen {
+    height: 70vh;
+  }
+}
+@media (max-width: 425px) {
+  #formulario {
+    padding: 20px;
+  }
+}
+.alertsuccess{
+  width:50%;
+  position: relative;top:-50px; right: -100%;
+background-color: #058762;
+color: #f2796e;
+border-radius: 5px;
+}
+.alertdanger{
+width: 50%;
+position: relative;top:-50px; right: -100%;
+background-color:#f2796e;
+color: #058762;
+border-radius: 10px;
+border-radius: 5px;
+}
+.alertContainer{
+  display: flex;
+  width: 50%;
+  border-radius: 5px;
 }
